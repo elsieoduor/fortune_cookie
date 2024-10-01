@@ -57,7 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text("Flutter Demo Fortune Page"),
+        title: const Text("Flutter Demo Fortune Page"),
       ),
       body: Center(
         child: Column(
@@ -68,13 +68,13 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
-                  '${_currentFortune}',
+                  _currentFortune,
                   style: Theme.of(context).textTheme.titleMedium,
                 ),
               ),
             ),
             ElevatedButton(
-                onPressed: _randomFortune, child: Text("Get Fortune")),
+                onPressed: _randomFortune, child: const Text("Get Fortune")),
           ],
         ),
       ),
